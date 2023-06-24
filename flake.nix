@@ -34,7 +34,7 @@
         }: let
           mkMobile = buildSystem:
             nixpkgs.lib.nixosSystem {
-              inherit system;
+              system = buildSystem;
               inherit modules;
             };
         in
